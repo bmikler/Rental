@@ -91,10 +91,10 @@ public class RentService {
 
     private Customer readCustomer() {
 
-        System.out.println("Prompt customer id:");
-        long customerId = Long.parseLong(scanner.nextLine());
+        System.out.println("Prompt customer document number:");
+        String documentNo = scanner.nextLine();
 
-        return customerRepository.findById(customerId)
+        return customerRepository.findByDocumentNumberIgnoreCase(documentNo)
                 .orElseThrow(() -> new CustomerNotFoundException("Customer not found."));
     }
 

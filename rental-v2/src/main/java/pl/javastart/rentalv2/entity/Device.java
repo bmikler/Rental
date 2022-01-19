@@ -72,14 +72,11 @@ public class Device {
 
     @Override
     public String toString() {
-        return "Device{" +
-                "id=" + id +
+        return "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", quantityInStock=" + quantityInStock +
                 ", price=" + price +
-                ", category=" + category +
-                ", borrowers=" + borrowers +
-                '}';
+                ", category=" + category;
     }
 }
